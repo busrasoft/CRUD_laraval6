@@ -18,14 +18,16 @@
               </tr>
             </thead>
             <tbody>
+              @foreach ($lesson as $key)
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td>{{$key->lesson_title}}</td>
+                <td>{{$key->lesson_content}}</td>
+                <td>{{$key->lesson_must}}</td>
                 <td width="10"><a href=""><button class="btn btn-primary">Update</button></a></td>
                 <td width="10"><a href=""><button class="btn btn-danger">Delete</button></a></td>
               </tr>
+              @endforeach
             </tbody>
           </table>
     </div>
