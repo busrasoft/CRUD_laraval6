@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class LessonController extends Controller
 {
     public function index(){
-        return 'zip';
+        return view('lesson');
     }
 
     public function lessonInsert(Request $request){
