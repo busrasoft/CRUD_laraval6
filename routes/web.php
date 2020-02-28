@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lesson', function(){
-    return 'ıts work';
-});
+Route::get('/lesson', 'LessonController@index')->name('lessonGet');
+Route::post('/lessonInsert', 'LessonController@lessonInsert')->name('lessonInsert');
