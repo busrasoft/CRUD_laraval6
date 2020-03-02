@@ -10,8 +10,8 @@
   </div>
   @endif
   <div align="right">
- <a href="">
-   <button class="btn btn-success">Geri</button>
+ <a href="{{route('lessonGet')}}">
+   <button class="btn btn-success">Back</button>
  </a>
    
   </div>
