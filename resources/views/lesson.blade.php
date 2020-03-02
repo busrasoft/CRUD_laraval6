@@ -5,6 +5,12 @@
 @endsection
 <div class="container md-12">
     <h1>Dersler</h1>
+    <div align="right">
+      <a href="">
+      <button class="btn btn-success">Lesson Add</button>
+      </a>
+    </div>
+    <br>
     <div class="col-md-12">
         <table class="table table-striped">
             <thead>
