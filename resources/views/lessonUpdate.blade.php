@@ -3,7 +3,7 @@
 @section('content')
  
 <div class="container md-12">
-  <h1>Lesson Add</h1>
+  <h1>Lesson Update</h1>
   @if (session()->has('status'))
   <div class="alert alert-success">
     {{session('status')}}   
@@ -14,20 +14,19 @@
    <button class="btn btn-success">Geri</button>
  </a>
    
-
   </div>
   <br>
   <div class="col-md-12">
-    <form action="{{route('lessonInsertPost')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('lessonUpdatePost', ['id'=>$lesson->id])}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">     
-      <input class="form-control" value="{{old('lesson_title')}}" type="text" name="lesson_title" placeholder="Title">
+      <input class="form-control" value="{{$lesson->lesson_title}}" type="text" name="lesson_title" placeholder="Title">
     </div>
     <div class="form-group">
-      <input class="form-control" value="{{old('lesson_content')}}" type="text" name="lesson_content" placeholder="Content">
+      <input class="form-control" value="{{$lesson->lesson_content}}" type="text" name="lesson_content" placeholder="Content">
     </div>
     <div class="form-group">
-      <input class="form-control" value="{{old('lesson_must')}}" type="text" name="lesson_must" placeholder="Must">
+      <input class="form-control" value="{{$lesson->lesson_must}}" type="text" name="lesson_must" placeholder="Must">
     </div>
     <input class="form-control" type="submit" value="Lesson Add">
     </form>  

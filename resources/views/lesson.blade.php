@@ -6,7 +6,7 @@
 <div class="container md-12">
     <h1>Dersler</h1>
     <div align="right">
-      <a href="">
+    <a href="{{route('lessonInsert')}}">
       <button class="btn btn-success">Lesson Add</button>
       </a>
     </div>
@@ -30,7 +30,7 @@
                 <td>{{$key->lesson_title}}</td>
                 <td>{{$key->lesson_content}}</td>
                 <td>{{$key->lesson_must}}</td>
-                <td width="10"><a href=""><button class="btn btn-primary">Update</button></a></td>
+                <td width="10"><a href="{{route('lessonUpdate',['id' => $key->id])}}"><button class="btn btn-primary">Update</button></a></td>
                 <td width="10"><a href=""><button class="btn btn-danger">Delete</button></a></td>
               </tr>
               @endforeach

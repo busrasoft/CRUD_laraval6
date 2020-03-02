@@ -15,5 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lesson', 'LessonController@index')->name('lessonGet');
-Route::post('/lessonInsert', 'LessonController@lessonInsert')->name('lessonInsert');
+Route::get('lesson', 'LessonController@index')->name('lessonGet');
+
+Route::get('lessonInsert', 'LessonController@lessonInsert')->name('lessonInsert');
+Route::post('lessonInsertPost', 'LessonController@lessonInsertPost')->name('lessonInsertPost');
+
+Route::get('lessonUpdate/{id}', 'LessonController@lessonUpdate')->name('lessonUpdate');
+Route::post('lessonUpdatePost/{id}', 'LessonController@lessonUpdatePost')->name('lessonUpdatePost');
+
+Route::get('lessonDelete/{id}', 'LessonController@lessonDelete')->name('lessonDelete');
+
+
