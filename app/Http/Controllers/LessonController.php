@@ -64,4 +64,10 @@ class LessonController extends Controller
         return back()->with('status', 'Guncelleme basarili oldu');
         }
     }
+
+    public function lessonDelete($id){
+        DB::table('lesson')
+        ->delete($id);
+        return back();
+    }
 }

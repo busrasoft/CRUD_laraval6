@@ -31,7 +31,7 @@
                 <td>{{$key->lesson_content}}</td>
                 <td>{{$key->lesson_must}}</td>
                 <td width="10"><a href="{{route('lessonUpdate',['id' => $key->id])}}"><button class="btn btn-primary">Update</button></a></td>
-                <td width="10"><a href=""><button class="btn btn-danger">Delete</button></a></td>
+                <td width="10"><a href="{{route('lessonDelete',['id' => $key->id])}}"><button class="btn btn-danger">Delete</button></a></td>
               </tr>
               @endforeach
             </tbody>
